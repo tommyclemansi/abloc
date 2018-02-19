@@ -1,0 +1,480 @@
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+h3,.linkpage { font-weight: bold; 
+               color: #054212;
+             }
+
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/*
+added by tcleyman 17/10
+*/
+
+
+
+
+
+
+
+body{
+/*background: url() no-repeat center center fixed;*/
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+/*padding-top: 50px;*/
+}
+
+    .tablefont{
+    font-size: 0.7em; /* 40px/16=2.5em */
+    }
+
+.addmargin{
+    margin-left: -15px;
+    
+    }
+
+.addachtergrond{/*
+background-image: url("/images/testachtergrond.png");*/
+}
+
+.addspacingcontact{
+    padding-top: 150px;
+}
+
+.page-content{
+paddding: 0px 0px;
+padding-top: 50px;
+margin-left:-20px;
+}
+
+.row{
+margin-bottom: 1.5en;
+/*below each row have 1.5 en --> 1.5 the font size of browser*/
+}
+
+/*
+following moves caroussel a bit up
+*/
+.putlower{
+position: relative;
+/*check if hover is still working*/
+    top:-20px;
+}
+
+.welcome{
+    h1, p{
+    text-align: center;
+    color: white;
+        font-weight: 200;
+    }
+}
+
+.foot {
+    /*background: #232323;
+    color: #ffff*/
+    font-size: 85%;
+    
+    .widgt{
+    margin-top: 1.5en;
+    border-right: 1px solid #1c1c1c;
+        
+    }
+
+}
+
+.handtekening{
+
+    /*font-family:fantasy;*/
+font-family: 'Indie Flower';
+font-size: 20px;
+    -ms-transform: rotate(0deg); /* IE 9 */
+    -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+    transform: rotate(0deg);
+      display: none;
+      /*visibility: hidden;*/
+    z-index: 0;
+    
+}
+
+/*
+this makes icon invisible on top right */
+
+.tester1 {
+      display: none;
+     /* visibility: hidden;*/
+    z-index: 0;
+      } 
+
+/*
+need to put it just a bit lower then the first navbar 
+else hovering will not work*/
+.iconbigger {
+top: 35px;
+}
+/*
+color of website
+#c1d72f;
+*/
+hr {
+    
+    border: none;
+    /* Set the hr color */
+    color: #c1d72f;/* old IE */
+    border-color: #c1d72f;
+    background-color: #c1d72f; /* Modern Browsers */
+    
+    display: block;
+    height: 1px;
+     
+}
+
+
+/*this is the div that surrounds all other divs and contains all page content except for the navbar*/
+.outside {
+/*background: #ff2bca;*/
+/*background-image: url('/images/background1.png');
+background-size: cover;*/
+}
+
+/* by default bootstrap seems to change the size of xs colums, here I undo this 
+This has to be the first media query*/
+@media all and (max-width: 767px) {          
+/*
+Here I undo what is done with a col, I set the pic back to full width of the screen
+    */
+    .changecol{
+        /*margin-left: -15px;
+        margin-right: -15px;*/
+        padding-right: 0px;
+        padding-left: 0px;
+    min-width:100%;
+    }
+    
+
+    
+    /*
+    certainly for smaller screens we need to add some margin to left & right */
+   .addmargin{
+    margin-left: 7px;
+    margin-right: 7px;
+    }
+    
+    .well{padding:0px;}
+        
+      
+    .putlower{width:100%;
+    margin:0;}
+    
+    .carousel-inner > . item > img {
+     /*margin-left: -15px;
+        margin-left: 15px;*/
+        /*margin-right: 5px;*/
+        /*position: absolute;*/
+    /*top: 50px;
+    left:0;*/
+    /*min-width:100%;*/
+    width: auto;
+    /*height: auto;*/
+    height: 100%;
+    }
+    
+    .addspacingcontact{
+    padding-top: 50px;
+}
+    
+}
+/* following are settings for the carousel */
+
+.carousel-inner{
+margin: auto;
+}
+
+.carousel-inner > .item > img {
+margin: auto;
+height: 100%;
+} 
+
+/* default is 200 px for very small devices */
+.carousel-inner > .item
+{
+height: 200px;
+}
+
+@media (min-width : 340px) {
+.carousel-inner > .item
+    {height: 250px;
+    }
+    .tablefont{
+    font-size: 0.8em; /* 40px/16=2.5em */
+    }
+}
+/*do one in between*/
+
+@media (min-width : 480px) {
+.carousel-inner > .item
+    {height: 275px;
+    }
+        .tablefont{
+    font-size: 1em; /* 40px/16=2.5em */
+    }
+}
+/*2,25*255= 
+*/
+/*@media (min-width : 768px) {
+.carousel-inner > .item
+    {height: 300px;
+    }
+  */
+
+
+/* following is for the size of the navbar 
+*/
+@media all and (min-width: 768px) {
+    .carousel-inner > .item
+    {height: 300px;
+    }
+    
+    /*tester1 is img so display should be inline */
+     .tester1 {
+         /*block is for div, inline is for img.. */
+         display:inline;
+      /*display: block;*/
+      /*visibility: inherit;*/
+           z-index: 1090;
+       /* visibility: visible;*/
+      } 
+    
+    /*handtekening is div so display should be block */
+         .handtekening {
+      display: block;
+      /*visibility: inherit;*/
+           z-index: 1090;
+      } 
+   
+  .navbar-fixed-width {
+    width: 720px;
+    margin-left: auto;
+    margin-right:auto;
+ }
+    
+}
+
+@media all and (min-width: 992px) {
+  .navbar-fixed-width {
+    width: 940px;
+    margin-left: auto;
+    margin-right:auto;
+  }
+
+}
+
+@media all and (min-width : 980px) {
+.carousel-inner > .item
+    {height: 350px;
+    }
+}
+
+
+
+@media all and (min-width: 1200px) {
+    
+    .carousel-inner > .item
+    {height: 350px;
+    }
+    
+  .navbar-fixed-width {
+    width: 1140px;
+    margin-left: auto;
+    margin-right:auto;
+  }
+    
+    
+}
+    
+
+
+
+/* end siz of navbar */
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
