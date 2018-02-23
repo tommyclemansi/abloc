@@ -1,15 +1,11 @@
 <!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<html class="no-js" lang="">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <!--<meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1">-->
         <title>A bloc cycling team</title>
         <meta name="description" content="a bloc cycling team">
-        <meta name="keywords" content="a bloc cycling team opwijk fietsclub">
+        <meta name="keywords" content="a bloc cycling team opwijk fietsclub de plets">
         <meta name="author" content="Tom Cleymans">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- robots may index this page and others.. -->
@@ -17,232 +13,98 @@
         <!-- do not cache for the moment as we change this now and then-->
         <meta http-equiv="pragma" content="no-cache">
         <link rel="apple-touch-icon" href="images/abloc_logo.jpg">
-
-        <!--<link rel="stylesheet" href="css/normalize.min.css">-->
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/main.css">
-
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-        <!-- fix for dot.tk frame --> 
-        <script language="Javascript">
-            // self, and window are both aliases for the host/window. 
-            // parent & top will also point to the window, except when lower down in a frame hierarchy
-            // if (top.location != document.location) top.location = document.location;
-            if(top!= self) top.location.href = self.location.href
+<!-- fix for dot.tk frame --> 
+<script language="Javascript">
+    // self, and window are both aliases for the host/window. 
+    // parent & top will also point to the window, except when lower down in a frame hierarchy
+    // if (top.location != document.location) top.location = document.location;
+    if(top!= self) top.location.href = self.location.href
 </script>
-    </head>
-    <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+<script src="/js/vendor/jquery-1.11.2.min.js"></script>
+<script> 
+$(function(){
+  $("#mynavbar").load("mynavbar.html"); 
+  $("#mycarousel").load("mycarousel.html"); 
+  $("#myfootertje").load("myfooter.html"); 
+});
+</script>
 
-        <!-- start paste here -->
-   <!-- I will try to design a well around navbar -->
-         
-        <nav class="navbar navbar-default navbar-fixed-top navbar-inverse navbar-fixed-width">
-    <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
- <a class="navbar-brand" href="#">a Bloc Cycling</a>
-    </div>
+</head>
+<body>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-            <li class="active"><a href="index.html">Home<span class="sr-only">(current)</span></a></li>
-            <li><a href="index.html">Activiteiten</a></li>
-            <li><a href="index.html">Leden</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
- </nav>
-
-        <!--container purely for image only -->
-        <div class="container navbar-fixed-top navbar-fixed-width iconbigger">
-<div class="pull-right">
-        <img src="images/ABloclogo_t.png" width="120px" height="120px" class="tester1"/>
-    </div>
-</div>
-        <!-- end container for image -->
-        
-<!-- end of navbar, start our container for the webpage -->    
-
-        
-        
-        
-<div class="row">
-<div class="col-xs-12 changecol" > 
-<div class="container outside well">
-       
-    
-
-<div class="container page-content putlower">
-    <!-- here is for styling-->
-    <div class="hero row">
-    <div class="col-xs-12 changecol">
-    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="10000">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-
-</ol>
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <img src="images/ABlocploegfoto.JPG" alt="foto1">
-      <div class="carousel-caption">
-      </div>
-    </div>
-    <div class="item">
-      <img src="images/ABloclogo.jpg" alt="foto2">
-      <div class="carousel-caption">
-       </div>
-    </div>
-
+<div id="mynavbar"></div>
       
-  </div><!-- end carousel-inner -->
+<div class="row">
+<div class="col-xs-12 changecol"> 
+<div class="container outside well">
 
-  <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-        </div>
-    </div>
+<div id="mycarousel"></div>
+<!-- page should be same until this spot -->
     
-        
-</div>        <!-- end carousel-->
-        <!-- end slider -->
-
-        <!-- end paste here -->
-
-
-<!-- start home after slider -->
-<hr/>
+    
+<!-- start home -->
 <div class ="container addmargin">
 <div class = "row">
 <div class = "col-xs-12">
 <h4>A Bloc Cycling</h4>    
      
-</BR>
+<BR/>
 <p>
 A BLOC is een wielerploegje ontstaan uit oud-ksa leiders en enkele vrienden met een passie voor fietsen. Onder het motto “hoe meer zielen, hoe meer vreugde” is doorheen de tijd de samenstelling van onze club al sterk uitgebreid. Bij onze leden zijn er die reeds 15 jaar fietsen, anderen daarentegen hebben nog maar net hun passie voor de wielersport ontdekt. Het allerbelangrijkste voor onze wielerploeg is dat we ons amuseren, we rijden zo snel als de traagste. Het competitieve komt zeker aan bod maar na een sprint of klim wordt op elkaar gewacht om samen de rit te kunnen afsluiten.
 </p>
-  
-    
-        
-        
-            <!-- start test tab -->
+          
+<!-- start test tab -->
 <ul class="nav nav-tabs">
     <li><a data-toggle="tab" href="#sectionA">Wekelijkse Activiteiten</a></li>
     <li class="active"><a data-toggle="tab" href="#sectionB" id="test">Nieuws</a></li>
 </ul>
 <div class="tab-content">
-    <div id="sectionA" class="tab-pane fade"></br>
- 
-  <p>
-      Woensdag om 19u spreken we af aan onze sponsor “De Plets”, hierbij hebben we een tocht van om en bij de 50-60km voor ogen met een gemiddelde snelheid van 30-31km/u. We zijn dus meestal rond 21u terug aan “De Plets” waar de leden die tijd/zin hebben nog iets drinken.</p>
-    <p>Zondagse tocht wordt meestal via whatsapp besproken, dit kan gaan van deelname aan een georganiseerde toertocht tot een zelfgeorganiseerde tocht naar de Vlaamse Ardennen. De keuze van de tocht is meestal afhankelijk van de beschikbaarheid van de leden en gebeurt dus steeds in samenspraak.</p>
-        
-        
-    </div>
-
-    <div id="sectionB" class="tab-pane fade in active"><br/>
-
-  
-        <p>
-1 mei 100k tourtocht  !
-            </p>
-<br/>
-
-    <img src="images/IMG-20180223-WA0004.jpg" alt="the_event" width="100%">
- 
-
- 
-    </div>
-
-
-
+    
+<div id="sectionA" class="tab-pane fade"></br>
+<p>
+Woensdag om 19u spreken we af aan onze sponsor “De Plets”, hierbij hebben we een tocht van om en bij de 50-60km voor ogen met een gemiddelde snelheid van 30-31km/u. We zijn dus meestal rond 21u terug aan “De Plets” waar de leden die tijd/zin hebben nog iets drinken.
+</p>
+<p>Zondagse tocht wordt meestal via whatsapp besproken, dit kan gaan van deelname aan een georganiseerde toertocht tot een zelfgeorganiseerde tocht naar de Vlaamse Ardennen. De keuze van de tocht is meestal afhankelijk van de beschikbaarheid van de leden en gebeurt dus steeds in samenspraak.
+</p>
 </div>
 
-    <!-- end test tab -->  
-        
-</p>    
-</div>    
+<div id="sectionB" class="tab-pane fade in active"><br/>
+<br/>
+<img src="images/IMG-20180223-WA0004.jpg" alt="the_event" width="100%">
+</div>
+
+</div>
+<!-- end tab content -->  
+          
+</div> <!-- end col -->
 </div> <!-- end row --> 
-</div> <!-- end container -->
-    <br/><hr/>
+</div> 
+<!-- end home -->
+    
+    
+<br/>
+<hr/>
 <!-- end home after slider -->
 
-    
-       
+
 <!-- start footer -->
 <footer class="full-width foot">
-
-<br/>
-<div class="container addmargin addachtergrond">
-            <div class="row">
-            <div class = "col-sm-5 col-xs-6 ">
-            
-                <address>
-                <p>    <br/>
-                    <strong>A bloc cycling team</strong>
-                    </p> 
-                </address> 
-<br/>          
-<p>dank aan onze sponsors<br/>
-de plets</br>
-knip&zo</br>
-   </p>            
-                
-            
-            </div>
-              
-                <aside class="col-sm-3 col-xs-4">     
-                    </aside>
-                  <div class = "col-sm-4 col-xs-4 handtekening">
-                <img src="images/De_Plets_Geel_t.png" width="90px" height="200px" />
-                <img src="images/Knip_en_Zo_bg.png" width="90px" height="200px" /> 
-                </div>
-                <p class="col-xs-12 widget">&copy;Tom Cleymans 2018</p>
-        
-            </div>
-            </div> <!-- end addachtergrond-->
-
-        
-<div class="credits">
-<div class="container">
-    <div class="row">
-       
-    </div>
-</div>    
-    </div>        
-        </footer>        
+    <div id="myfootertje"></div>
+</footer>        
 <!-- end footer -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
-        
-        <!--<script src="js/bootstrap.min.js"></script>-->
-        <script src="js/bootstrap.js"></script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
- 
-    </div> <!-- end container -->
-    </div> <!-- end row outside -->
-    </div><!-- end outside -->
-    </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
+</script>   
+<!--<script src="js/bootstrap.min.js"></script>-->
+<script src="js/bootstrap.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+</div> <!-- end container -->
+</div> <!-- end row outside -->
+</div><!-- end outside -->
+</body>
 </html>
