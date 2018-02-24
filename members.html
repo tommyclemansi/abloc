@@ -41,7 +41,11 @@ $(function(){
         <script>
   hello.init({
     strava: "23719"     // not real id
-  });
+  }, {
+  response_type: 'code',
+  force: false,
+  display: 'popup',
+});
 </script>
 
 </head>
