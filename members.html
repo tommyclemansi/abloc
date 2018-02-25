@@ -95,9 +95,13 @@ hello.init(
         callback(param);
     });*/
     
-    hello.on('auth.login', function (auth) {
+    hello.on('auth.login',{display:'page'} ,function (auth) {
     console.log('on auth login');
-    console.log(auth);});
+    console.log(auth);}).then(function() {
+	alert('You are signed in to strava');
+}, function(e) {
+	alert('Signin error: ' + e.error.message);
+});;
     /*hello(auth.strava).api('/me').then(function (resp) {
 	var lab = document.createElement("div");
 	lab.id = "pic_and_greet";
