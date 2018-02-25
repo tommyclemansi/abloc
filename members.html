@@ -17,6 +17,7 @@
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
         <script src="js/vendor/hello.all.js"></script>
+        <script src="js/mystrava.js"></script>
 <!-- fix for dot.tk frame --> 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
@@ -39,13 +40,18 @@ $(function(){
 </script>
         <!--hello code -->
         <script>
-  hello.init({
-    strava: "23719"     // not real id
-  }, {
-  response_type: 'code',
-  force: false,
-  display: 'popup',
-});
+            
+   <!-- my attempt for strava integration.. -->         
+hello.init(
+{
+"strava" : "23719"
+},
+//{
+//redirect_uri:'http://stagingd11.dream11.com/',
+//oauth_proxy: "https://auth-server.herokuapp.com/proxy"
+//https://auth-server.herokuapp.com/ https://auth-server.herokuapp.com/proxy
+/
+    //});  
 </script>
 
 </head>
@@ -69,9 +75,12 @@ $(function(){
      
 <BR/>
 <p>
-<button onclick="hello('strava').login()">strava</button>
-<button onclick="hello('strava').logout()">strava</button>
+<button onclick="hello('strava').login({
+	response_type: 'code'
+})">strava login</button>
+<button onclick="hello('strava').logout()">strava logout</button>
 <script>
+
 
     hello.on('auth.login', function (auth) {
 
