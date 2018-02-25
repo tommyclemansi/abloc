@@ -50,7 +50,7 @@ hello.init(
 //redirect_uri:'http://stagingd11.dream11.com/',
 //oauth_proxy: "https://auth-server.herokuapp.com/proxy"
 //https://auth-server.herokuapp.com/ https://auth-server.herokuapp.com/proxy
-/
+//
     //});  
 </script>
 
@@ -75,9 +75,7 @@ hello.init(
      
 <BR/>
 <p>
-<button onclick="hello('strava').login({
-	response_type: 'code'
-})">strava login</button>
+<button onclick="hello('strava').login()">strava login</button>
 <button onclick="hello('strava').logout()">strava logout</button>
 <script>
 
@@ -87,7 +85,7 @@ hello.init(
       // add a greeting and access the thumbnail and name from
       // the authorized response
 
-      hello(auth.network).api('/me').then(function (resp) {
+      hello(auth.strava).api('/me').then(function (resp) {
 	var lab = document.createElement("div");
 	lab.id = "pic_and_greet";
 	lab.innerHTML = '<img src="' + resp.thumbnail + '" /> Hey ' + resp.name;
