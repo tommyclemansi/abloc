@@ -6,13 +6,17 @@ hello.init({
 
 		oauth: {
 			version: 2,    
-            auth: 'https://www.strava.com/oauth/authorize ',
-            grant: 'https://www.strava.com/oauth/token'
+            auth: 'https://www.strava.com/oauth/authorize',
+            grant: 'https://www.strava.com/oauth/token',
 			//auth: 'https://app.box.com/api/oauth2/authorize', // guess first leg (get using clientid)
             //grant: 'https://api.box.com/oauth2/token', // this is for second leg (using POST ), client id & secret are passed
 			response_type: 'code'
 		},
+/*
+due to the fact that this is code -- explicit grant, we need to use a proxy..
 
+https://auth-server.herokuapp.com/
+*/
 		base: 'https://www.strava.com/api/v3/',
 
 		get: {
