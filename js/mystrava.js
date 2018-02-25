@@ -5,7 +5,8 @@ hello.init({
 		name: 'strava',
 
 		oauth: {
-			version: 2,    
+			version: 2,   
+            //request: 'https://www.strava.com/oauth/authorize',
             auth: 'https://www.strava.com/oauth/authorize',
             grant: 'https://www.strava.com/oauth/token',
 			//auth: 'https://app.box.com/api/oauth2/authorize', // guess first leg (get using clientid)

@@ -45,7 +45,11 @@ $(function(){
 hello.init(
 {
 "strava" : "23719"
-});
+},
+{
+		oauth_proxy: 'https://auth-server.herokuapp.com/proxy'
+}
+);
     //,
 //{
 //redirect_uri:'http://stagingd11.dream11.com/',
