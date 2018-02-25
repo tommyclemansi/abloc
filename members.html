@@ -82,7 +82,10 @@ hello.init(
      
 <BR/>
 <p>
-<button onclick="hello('strava').login()">strava login</button>
+<button onclick="hello('strava').login().then(function() {
+	alert('You are signed in to strava');
+}, function(e) {
+	alert('Signin error: ' + e.error.message)">strava login</button>
 <button onclick="hello('strava').logout()">strava logout</button>
 <script>
 
@@ -95,12 +98,9 @@ hello.init(
         callback(param);
     });*/
     
-    hello.on('auth.login',{display:'page'} ,function (auth) {
+    hello.on('auth.login' ,function (auth) {
     console.log('on auth login');
-    console.log(auth);}).then(function() {
-	alert('You are signed in to strava');
-}, function(e) {
-	alert('Signin error: ' + e.error.message);
+    console.log(auth);});
 });;
     /*hello(auth.strava).api('/me').then(function (resp) {
 	var lab = document.createElement("div");
