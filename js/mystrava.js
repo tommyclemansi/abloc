@@ -7,8 +7,17 @@ hello.init({
 		oauth: {
 			version: 2,   
             //request: 'https://www.strava.com/oauth/authorize',
-            auth: 'https://www.strava.com/oauth/authorize',
-            grant: 'https://www.strava.com/oauth/token',
+            /*
+            https://www.strava.com/oauth/authorize?client_id=23719&response_type=code&redirect_uri=https%3A%2F%2Ftommyclemansi.github.io%2Fabloc%2Fmembers.html&state=%7B"client_id"%3A"23719"%2C"network"%3A"strava"%2C"display"%3A"popup"%2C"callback"%3A"_hellojs
+            
+            http://yizeng.me/2017/01/11/get-a-strava-api-access-token-with-write-permission/
+             http://www.strava.com/oauth/authorize?client_id=6414&response_type=code&redirect_uri=http://localhost/exchange_token&approval_prompt=force&scope=write
+             http://www.strava.com/oauth/authorize?client_id=23719&response_type=code&redirect_uri=https://tommyclemansi.github.io/abloc/members.html&state=%7B"client_id"%3A"23719"%2C"network"%3A"strava"%2C"display"%3A"popup"%2C"callback"%3A"_hellojs
+             
+             https://github.com/MrSwitch/hello.js/issues/392
+            */
+            auth: 'http://www.strava.com/oauth/authorize',
+            grant: 'http://www.strava.com/oauth/token',
 			//auth: 'https://app.box.com/api/oauth2/authorize', // guess first leg (get using clientid)
             //grant: 'https://api.box.com/oauth2/token', // this is for second leg (using POST ), client id & secret are passed
 			response_type: 'code'
