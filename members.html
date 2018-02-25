@@ -79,19 +79,25 @@ hello.init(
 <button onclick="hello('strava').logout()">strava logout</button>
 <script>
 
-
+/*hello.on('auth.login', function (response) {
+        console.log('on auth login');
+        console.log(response);
+        const cookies = new Cookies();
+        let auth = response.authResponse;
+        cookies.set('auth', auth.access_token, {path: '/', maxAge: auth.expires_in});
+        callback(param);
+    });*/
+    
     hello.on('auth.login', function (auth) {
-
-      // add a greeting and access the thumbnail and name from
-      // the authorized response
-
-      hello(auth.strava).api('/me').then(function (resp) {
+    console.log('on auth login');
+    console.log(auth);});
+    /*hello(auth.strava).api('/me').then(function (resp) {
 	var lab = document.createElement("div");
 	lab.id = "pic_and_greet";
 	lab.innerHTML = '<img src="' + resp.thumbnail + '" /> Hey ' + resp.name;
 	document.body.appendChild(lab);
       });
-    });
+    });====================$--------------------*/
 
     // remove the greeting when we log out
 
