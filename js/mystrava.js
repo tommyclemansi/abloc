@@ -16,7 +16,7 @@ hello.init({
              
              https://github.com/MrSwitch/hello.js/issues/392
             */
-            auth: 'http://www.strava.com/oauth/authorize',
+            auth: 'http://www.strava.com/oauth/authorize?approval_prompt=force',
             grant: 'http://www.strava.com/oauth/token',
 			//auth: 'https://app.box.com/api/oauth2/authorize', // guess first leg (get using clientid)
             //grant: 'https://api.box.com/oauth2/token', // this is for second leg (using POST ), client id & secret are passed
