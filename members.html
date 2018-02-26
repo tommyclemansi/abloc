@@ -104,7 +104,7 @@ function() {
     console.log('on auth login');
     console.log(auth);
         // first is success, second failure handler
-    hello.api('/athlete',function(json){console.log(json);}).then(function(json) {alert('Your name is ' + json.username);}, function(e) {alert('Whoops! ' + e.error.message);});
+    hello(auth.network).api('/athlete',function(json){console.log(json);}).then(function(json) {alert('Your name is ' + json.username);}, function(e) {alert('Whoops! ' + e.error.message);});
     });
     /*hello(auth.strava).api('/me').then(function (resp) {
 	var lab = document.createElement("div");
