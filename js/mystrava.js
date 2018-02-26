@@ -34,7 +34,7 @@ https://auth-server.herokuapp.com/
 
 		get: {
             getabloc: 'clubs/305358/activities',
-			me: 'users/me',
+			me: 'athlete',
 			'me/files': 'files'
 		},
 

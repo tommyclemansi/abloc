@@ -103,8 +103,11 @@ function() {
     hello.on('auth.login' ,function (auth) {
     console.log('on auth login');
     console.log(auth);
-    hello(auth.strava).api('/getabloc').then(function(resp){console.log(resp);});
-    });
+    hello.api('/me',function(json){console.log(json);}).then(function(json) {
+	alert('Your name is ' + json.username);
+}, function(e) {
+	alert('Whoops! ' + e.error.message);
+});
 
     /*hello(auth.strava).api('/me').then(function (resp) {
 	var lab = document.createElement("div");
