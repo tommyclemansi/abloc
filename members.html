@@ -103,8 +103,8 @@ function() {
     hello.on('auth.login' ,function (auth) {
     console.log('on auth login');
     console.log(auth);
-        // first is success, second failure handler
-    hello(auth.network).api('/athlete',function(json){console.log(json);}).then(function(json) {alert('Your name is ' + json.username);}, function(e) {alert('Whoops! ' + e.error.message);});
+        // first is success, second failure handler=
+    hello(auth.network).api('/athlete',function(json){console.log(json);}).then(function(json) {alert('Your name is ' + json.firstname + ' ' + json.lastname);}, function(e) {alert('Whoops! ' + e.error.message);});
     });
     /*hello(auth.strava).api('/me').then(function (resp) {
 	var lab = document.createElement("div");
