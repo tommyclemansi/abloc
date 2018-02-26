@@ -33,6 +33,7 @@ https://auth-server.herokuapp.com/
 		base: 'https://www.strava.com/api/v3/',
 
 		get: {
+            getabloc: 'clubs/305358/activities',
 			me: 'users/me',
 			'me/files': 'files'
 		},
