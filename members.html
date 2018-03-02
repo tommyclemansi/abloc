@@ -99,14 +99,26 @@ function() {
         cookies.set('auth', auth.access_token, {path: '/', maxAge: auth.expires_in});
         callback(param);
     });*/
+    var mySTRAVAID = localStorage.getItem("mySTRAVAID");
     
     hello.on('auth.login' ,function (auth) {
     console.log('on auth login');
     console.log(auth);
         // first is success, second failure handler=
-    hello(auth.network).api('/athlete',function(json){console.log(json);}).then(function(json) {alert('Your name is ' + json.firstname + ' ' + json.lastname);}, function(e) {alert('Whoops! ' + e.error.message);});
-        hello(auth.network).api('/clubs/305358/members',function(json){console.log(json);});
-       
+    if (mySTRAVAID==null)
+        {
+        hello(auth.network).api('/athlete',function(json){console.log(json);}).then(function(json) {
+            alert('Your name is ' + json.firstname + ' ' + json.lastname + ' ' json.id);
+            localStorage.setItem("mySTRAVAID", json.id);
+        }, function(e) {alert('Whoops! ' + e.error.message);});
+    }    
+            hello(auth.network).api('/clubs/305358/members',function(json){console.log(json);});
+        hello(auth.network).api('/athlete/<id>/stats',function(json){console.log(json);});
+    
+    
+    
+    
+    
     });
     /*hello(auth.strava).api('/me').then(function (resp) {
 	var lab = document.createElement("div");
