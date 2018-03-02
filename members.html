@@ -115,17 +115,32 @@ function() {
     }    
             
         hello(auth.network).api('/clubs/305358/members',function(json){console.log(json);}).then(function(json){
+            $("#ABLOCHTML").html("<div id='ABLOCHTML_A'></div>");
             for(var i = 0; i < json.length; i++) {  // here we can simply iterate over our runners/cyclers.. 
                                                     var obj = json[i];
                                                     console.log(json[i].id);
-                                                    $("#ABLOCHTML").html("<div id='ABLOCHTML_A'></div>");
+                                                    
                                                     $("#ABLOCHTML_A").after(json[i].firstname +" "+json[i].lastname+"</BR>");
                                                    // hello(auth.network).api('/athletes/'+json[i].id+'/stats',function(json){console.log(json);});
                                                     // getting Authorization Error
                                                     // see https://groups.google.com/forum/#!topic/strava-api/avoiJ3E7bnE
                                                  }
                                 });
-        hello(auth.network).api('/clubs/305358/activities',function(json){console.log(json);})
+        hello(auth.network).api('/clubs/305358/activities',function(json){console.log(json);}).then(function(json){
+            $("#ABLOCHTML").html("<div id='ABLOCACTIVITIES_A'></div>");
+            for(var i = 0; i < json.length; i++) {  // here we can simply iterate over our runners/cyclers.. 
+                                                    var obj = json[i];
+                                                    console.log(json[i].id);
+                                                    
+                                                    $("#ABLOCACTIVITIES_A").after(json[i].athlete.firstname +" "+json[i].distance/1000+" "+json[i].kudos_count</BR>");
+                                                   // hello(auth.network).api('/athletes/'+json[i].id+'/stats',function(json){console.log(json);});
+                                                    // getting Authorization Error
+                                                    // see https://groups.google.com/forum/#!topic/strava-api/avoiJ3E7bnE
+                                                 }
+                                });
+        
+        
+        
         //hello(auth.network).api('/athletes/'+localStorage.getItem("mySTRAVAID")+'/stats',function(json){console.log(json);});
     
     
