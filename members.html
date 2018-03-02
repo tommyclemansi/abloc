@@ -118,6 +118,7 @@ function() {
             for(var i = 0; i < json.length; i++) {  // here we can simply iterate over our runners/cyclers.. 
                                                     var obj = json[i];
                                                     console.log(json[i].id);
+                                                    $("#ABLOCHTML").html(json[i].firstname +" "json[i].lastname+"</BR>");
                                                    // hello(auth.network).api('/athletes/'+json[i].id+'/stats',function(json){console.log(json);});
                                                     // getting Authorization Error
                                                     // see https://groups.google.com/forum/#!topic/strava-api/avoiJ3E7bnE
@@ -154,7 +155,9 @@ function() {
     <li class="active"><a data-toggle="tab" href="#sectionB" id="test">Nieuws</a></li>
 </ul>
 <div class="tab-content">
-    
+    <div class="ABLOC4YOU"></div>
+    <div class="ABLOCHTML"></div>
+    <div class="ABLOCACTIVITIES"></div>
 <div id="sectionA" class="tab-pane fade"><br/>
 <p>
 Woensdag om 19u spreken we af aan onze sponsor “De Plets”, hierbij hebben we een tocht van om en bij de 50-60km voor ogen met een gemiddelde snelheid van 30-31km/u. We zijn dus meestal rond 21u terug aan “De Plets” waar de leden die tijd/zin hebben nog iets drinken.
