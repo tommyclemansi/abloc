@@ -118,7 +118,7 @@ function() {
             for(var i = 0; i < json.length; i++) {  // here we can simply iterate over our runners/cyclers.. 
                                                     var obj = json[i];
                                                     console.log(json[i].id);
-                                                    $("#ABLOCHTML").html(json[i].firstname +" "+json[i].lastname+"</BR>");
+                                                    $("#ABLOCHTML").after(json[i].firstname +" "+json[i].lastname+"</BR>");
                                                    // hello(auth.network).api('/athletes/'+json[i].id+'/stats',function(json){console.log(json);});
                                                     // getting Authorization Error
                                                     // see https://groups.google.com/forum/#!topic/strava-api/avoiJ3E7bnE
