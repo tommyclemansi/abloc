@@ -104,6 +104,7 @@ function() {
     hello.on('auth.login' ,function (auth) {
     console.log('on auth login');
     console.log(auth);
+    console.log('checking now localStorage.getItem("mySTRAVAID")' + localStorage.getItem("mySTRAVAID"));
         // first is success, second failure handler=
     if (localStorage.getItem("mySTRAVAID")==null)
         {
@@ -114,7 +115,7 @@ function() {
     }    
             
         hello(auth.network).api('/clubs/305358/members',function(json){console.log(json);});
-        hello(auth.network).api('/athlete/localStorage.getItem("mySTRAVAID")/stats',function(json){console.log(json);});
+        hello(auth.network).api('/athlete/'+localStorage.getItem("mySTRAVAID")+'/stats',function(json){console.log(json);});
     
     
     
