@@ -118,9 +118,12 @@ function() {
             for(var i = 0; i < json.length; i++) {  // here we can simply iterate over our runners/cyclers.. 
                                                     var obj = json[i];
                                                     console.log(json[i].id);
-                                                    hello(auth.network).api('/athletes/'+json[i].id+'/stats',function(json){console.log(json);});
+                                                   // hello(auth.network).api('/athletes/'+json[i].id+'/stats',function(json){console.log(json);});
+                                                    // getting Authorization Error
+                                                    // see https://groups.google.com/forum/#!topic/strava-api/avoiJ3E7bnE
                                                  }
                                 });
+        hello(auth.network).api('/clubs/305358/activities',function(json){console.log(json);})
         //hello(auth.network).api('/athletes/'+localStorage.getItem("mySTRAVAID")+'/stats',function(json){console.log(json);});
     
     
