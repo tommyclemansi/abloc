@@ -120,7 +120,7 @@ function() {
                                                     var obj = json[i];
                                                     console.log(json[i].id);
                                                     
-                                                    $("#ABLOCHTML_A").after(json[i].firstname +" "+json[i].lastname+"</BR>");
+                                                    $("#ABLOCHTML_A").before(json[i].firstname +" "+json[i].lastname+"</BR>");
                                                    // hello(auth.network).api('/athletes/'+json[i].id+'/stats',function(json){console.log(json);});
                                                     // getting Authorization Error
                                                     // see https://groups.google.com/forum/#!topic/strava-api/avoiJ3E7bnE
@@ -132,7 +132,7 @@ function() {
                                                     var obj = json[i];
                                                     console.log(json[i].id);
                                                     
-                                                    $("#ABLOCACTIVITIES_A").after(json[i].athlete.firstname +" "+json[i].distance/1000+" "+json[i].kudos_count+ "</BR>");
+                                                    $("#ABLOCACTIVITIES_A").before(json[i].athlete.firstname +" "+json[i].athlete.firstname+" - afstand: "+json[i].distance/1000+" kudos: "+json[i].kudos_count+ "</BR>");
                                                    // hello(auth.network).api('/athletes/'+json[i].id+'/stats',function(json){console.log(json);});
                                                     // getting Authorization Error
                                                     // see https://groups.google.com/forum/#!topic/strava-api/avoiJ3E7bnE
@@ -167,26 +167,23 @@ function() {
           
 <!-- start test tab -->
 <ul class="nav nav-tabs">
-    <li><a data-toggle="tab" href="#sectionA">Wekelijkse Activiteiten</a></li>
-    <li class="active"><a data-toggle="tab" href="#sectionB" id="test">Nieuws</a></li>
+    <li class="active"><a data-toggle="tab" href="#sectionA">leden</a></li>
+    <li><a data-toggle="tab" href="#sectionB" id="test">Activiteiten</a></li>
 </ul>
 <div class="tab-content">
+
+    
+<div id="sectionA" class="tab-pane fade in active"><br/>
+<p>
     <div id="ABLOC4YOU"></div>
     <div id="ABLOCHTML"></div>
-    <div id="ABLOCACTIVITIES"></div>
-<div id="sectionA" class="tab-pane fade"><br/>
-<p>
-Woensdag om 19u spreken we af aan onze sponsor “De Plets”, hierbij hebben we een tocht van om en bij de 50-60km voor ogen met een gemiddelde snelheid van 30-31km/u. We zijn dus meestal rond 21u terug aan “De Plets” waar de leden die tijd/zin hebben nog iets drinken.
-</p>
-<p>Zondagse tocht wordt meestal via whatsapp besproken, dit kan gaan van deelname aan een georganiseerde toertocht tot een zelfgeorganiseerde tocht naar de Vlaamse Ardennen. De keuze van de tocht is meestal afhankelijk van de beschikbaarheid van de leden en gebeurt dus steeds in samenspraak.
 </p>
 </div>
 
-<div id="sectionB" class="tab-pane fade in active"><br/>
-<br/>
-<img src="images/IMG-20180223-WA0004.jpg" alt="the_event" width="100%">
-</div>
-
+<div id="sectionB" class="tab-pane fade "><br/>
+    <p>
+<div id="ABLOCACTIVITIES"></div>
+</p>
 </div>
 <!-- end tab content -->  
           
