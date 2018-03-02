@@ -115,7 +115,7 @@ function() {
     }    
             
         hello(auth.network).api('/clubs/305358/members',function(json){console.log(json);});
-        hello(auth.network).api('/athlete/'+localStorage.getItem("mySTRAVAID")+'/stats',function(json){console.log(json);});
+        hello(auth.network).api('/athletes/'+localStorage.getItem("mySTRAVAID")+'/stats',function(json){console.log(json);});
     
     
     
