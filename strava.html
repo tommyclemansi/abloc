@@ -113,14 +113,28 @@ function() {
             localStorage.setItem("mySTRAVAID", json.id);
         }, function(e) {alert('Whoops! ' + e.error.message);});
     }    
-            
+        
+        hello(auth.network).api('/athletes/'+localStorage.getItem("mySTRAVAID")+'/stats',function(json){console.log(json);}).then(function(json){
+            $("#ABLOC4YOU").html("<div id=\"ABLOC4YOU_A\"></div>");
+            for(var i = 0; i < json.length; i++) {  // here we can simply iterate over our runners/cyclers.. 
+                                                    var obj = json[i];
+                                                    console.log(json[i].id);
+                                                    
+                                                    $("#ABLOC4YOU_A").before(json[i].firstname +" "+json[i].lastname+"</BR>");
+                                                   // hello(auth.network).api('/athletes/'+json[i].id+'/stats',function(json){console.log(json);});
+                                                    // getting Authorization Error
+                                                    // see https://groups.google.com/forum/#!topic/strava-api/avoiJ3E7bnE
+                                                 }
+                                });
+        
+        
         hello(auth.network).api('/clubs/305358/members',function(json){console.log(json);}).then(function(json){
             $("#ABLOCHTML").html("<div id=\"ABLOCHTML_A\"></div>");
             for(var i = 0; i < json.length; i++) {  // here we can simply iterate over our runners/cyclers.. 
                                                     var obj = json[i];
                                                     console.log(json[i].id);
                                                     
-                                                    $("#ABLOCHTML_A").after(json[i].firstname +" "+json[i].lastname+"</BR>");
+                                                    $("#ABLOCHTML_A").before(json[i].firstname +" "+json[i].lastname+"</BR>");
                                                    // hello(auth.network).api('/athletes/'+json[i].id+'/stats',function(json){console.log(json);});
                                                     // getting Authorization Error
                                                     // see https://groups.google.com/forum/#!topic/strava-api/avoiJ3E7bnE
@@ -167,15 +181,20 @@ function() {
           
 <!-- start test tab -->
 <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#sectionA">leden</a></li>
-    <li><a data-toggle="tab" href="#sectionB" id="test">Activiteiten</a></li>
+    <li class="active"><a data-toggle="tab" href="#sectionM">MyStrava</a></li>
+    <li><a data-toggle="tab" href="#sectionA">A BLOC Strava leden</a></li>
+    <li><a data-toggle="tab" href="#sectionB">A BLOC Activiteiten</a></li>
 </ul>
 <div class="tab-content">
 
-    
-<div id="sectionA" class="tab-pane fade in active">
+<div id="sectionM" class="tab-pane fade in active">
 <p>
     <div id="ABLOC4YOU"></div>
+</p>
+</div>
+    
+<div id="sectionA" class="tab-pane fade">
+<p>
     <div id="ABLOCHTML"></div>
 </p>
 </div>
