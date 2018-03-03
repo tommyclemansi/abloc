@@ -18,22 +18,27 @@
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
         <script src="js/vendor/hello.all.js"></script>
         <script src="js/mystrava.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <!-- page load not correct when code included in js
-        <script src="js/mycode.js"></script>-->
-        <script>// self, and window are both aliases for the host/window. 
-// parent & top will also point to the window, except when lower down in a frame hierarchy
-// if (top.location != document.location) top.location = document.location;
-window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
-// self, and window are both aliases for the host/window. 
-// parent & top will also point to the window, except when lower down in a frame hierarchy
-// if (top.location != document.location) top.location = document.location;
-if(top!= self) top.location.href = self.location.href
+        
+        
+<!-- fix for dot.tk frame --> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
+</script>
+<!--<script src="js/mycode.js"></script>-->
+<script>
+    // self, and window are both aliases for the host/window. 
+    // parent & top will also point to the window, except when lower down in a frame hierarchy
+    // if (top.location != document.location) top.location = document.location;
+    if(top!= self) top.location.href = self.location.href
+</script>
+
+
+<script>
 $(function(){
   $("#mynavbar").load("mynavbar.html"); 
   $("#mycarousel").load("mycarousel.html"); 
   $("#myfootertje").load("myfooter.html"); 
-});        
+});
 </script>
 </head>
 <body>
