@@ -119,8 +119,8 @@ function() {
 
                                                     console.log(json);
                                                     console.log('bike total: ' + json.ytd_ride_totals.distance/1000);
-                                                    $("#ABLOC4YOU_A").before("fietsen: " + json.ytd_ride_totals.count + " keer gefietst met totalen: " +json.ytd_ride_totals.distance/1000+"km in " + json.ytd_ride_totals.elapsed_time/1000 +"</BR>");
-                                                    $("#ABLOC4YOU_A").before("lopen: " + json.ytd_run_totals.count + " keer gelopen met totalen: " +json.ytd_run_totals.distance/1000+"km in " + json.ytd_run_totals.elapsed_time/1000 +"</BR>");
+                                                    $("#ABLOC4YOU_A").before("fietsen: " + json.ytd_ride_totals.count + " keer gefietst met totalen: " +json.ytd_ride_totals.distance/1000+"km in " + json.ytd_ride_totals.elapsed_time/6000 +" uur </BR>");
+                                                    $("#ABLOC4YOU_A").before("lopen: " + json.ytd_run_totals.count + " keer gelopen met totalen: " +json.ytd_run_totals.distance/1000+"km in " + json.ytd_run_totals.elapsed_time/6000 +" uur </BR>");
 
                                 });
         
