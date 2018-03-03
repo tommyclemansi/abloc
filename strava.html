@@ -33,15 +33,15 @@
 
 <script>
 $(function(){
-  $("#mynavbar").load("mynavbar.html"); 
+  $("#mynavbar").load("mynavbar_strava.html"); 
   $("#mycarousel").load("mycarousel.html"); 
   $("#myfootertje").load("myfooter.html"); 
 });
 </script>
-        <!--hello code -->
-        <script>
-            
-   <!-- my attempt for strava integration.. -->         
+
+<!--hello code -->
+<script>            
+<!-- my attempt for strava integration.. -->         
 hello.init(
 {
 "strava" : "23719"
@@ -116,15 +116,11 @@ function() {
         
         hello(auth.network).api('/athletes/'+localStorage.getItem("mySTRAVAID")+'/stats',function(json){console.log(json);}).then(function(json){
             $("#ABLOC4YOU").html("<div id=\"ABLOC4YOU_A\"></div>");
-            for(var i = 0; i < json.length; i++) {  // here we can simply iterate over our runners/cyclers.. 
-                                                    var obj = json[i];
+
                                                     console.log(json[i].id);
-                                                    
-                                                    $("#ABLOC4YOU_A").before(json[i].firstname +" "+json[i].lastname+"</BR>");
-                                                   // hello(auth.network).api('/athletes/'+json[i].id+'/stats',function(json){console.log(json);});
-                                                    // getting Authorization Error
-                                                    // see https://groups.google.com/forum/#!topic/strava-api/avoiJ3E7bnE
-                                                 }
+                                                    $("#ABLOC4YOU_A").before("dit jaar al gefietst: " json.ytd_ride_totals.distance/1000+"</BR>");
+                                                    $("#ABLOC4YOU_A").before("dit jaar al gelopen: " json.ytd_run_totals.distance/1000+"</BR>");
+
                                 });
         
         
