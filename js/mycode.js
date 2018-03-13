@@ -1,10 +1,9 @@
-window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
-// self, and window are both aliases for the host/window. 
-// parent & top will also point to the window, except when lower down in a frame hierarchy
-// if (top.location != document.location) top.location = document.location;
-if(top!= self) top.location.href = self.location.href
-$(function(){
-  $("#mynavbar").load("mynavbar.html"); 
-  $("#mycarousel").load("mycarousel.html"); 
-  $("#myfootertje").load("myfooter.html"); 
-});
+function enableNoResize() 
+{
+    var frame = window.document.getElementsByName(dot_tk_frame_content)[0]
+    //var frame = parent.frames['frame1'] || parent.document.getElementById('dot_tk_frame_content');
+    if (frame != null)
+    {frame.noResize = "true";
+    frame.setAttribute('noResize', true);
+    }
+}
