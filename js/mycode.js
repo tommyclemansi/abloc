@@ -5,6 +5,6 @@ function enableNoResize()
     if (frame != null)
     {frame.noResize = "false";
     frame.setAttribute('noResize', false);
-     console.log(frame noresize attribute set to false);
+     console.log("frame noresize attribute set to false");
     }
 }
