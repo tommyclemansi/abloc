@@ -7,4 +7,7 @@ function enableNoResize()
     frame.setAttribute('noResize', false);
      console.log("frame noresize attribute set to false");
     }
+    else {
+        console.log("sorry no frame found..");
+    }
 }
