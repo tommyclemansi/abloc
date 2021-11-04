@@ -1,0 +1,38 @@
+/*.carousel-inner {
+  margin: auto;
+}*/
+
+.carousel-inner > .carousel-item > img {
+  margin: auto;
+  width: auto;
+}
+
+@media (max-width: 340px) {
+  .carousel-inner > .carousel-item {
+    height: 200px;
+  }
+}
+
+@media (min-width: 340px) {
+  .carousel-inner > .carousel-item {
+    height: 250px;
+  }
+}
+
+@media (min-width: 480px) {
+  .carousel-inner > .carousel-item {
+    height: 300px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .carousel-inner > .carousel-item {
+    height: 350px;
+  }
+}
+
+@media all and (min-width: 980px) {
+  .carousel-inner > .carousel-item {
+    height: 400px;
+  }
+}
