@@ -4,6 +4,10 @@
   -ms-transform: rotate(0deg); /* IE 9 */
   -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
   transform: rotate(0deg);
-  display: none;
-  z-index: 0;
+}
+
+footer {
+  height: 150px;
+  background: url("../images/abloclogo_t.png") repeat;
+  background-size: auto 100%;
 }

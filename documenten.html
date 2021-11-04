@@ -1,90 +1,61 @@
 <!doctype html>
 <html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>A bloc cycling team</title>
-        <meta name="description" content="a bloc cycling team">
-        <meta name="keywords" content="a bloc cycling team opwijk fietsclub de plets">
-        <meta name="author" content="Tom Cleymans">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- robots may index this page and others.. -->
-        <meta name="robots" content="index, follow">
-        <!-- do not cache for the moment as we change this now and then-->
-        <meta http-equiv="pragma" content="no-cache">
-        <link rel="apple-touch-icon" href="images/abloc_logo.jpg">
-        <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-        <script src="js/vendor/hello.all.js"></script>
-        <script src="js/mystrava.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <!-- page load not correct when code included in js
-        <script src="js/mycode.js"></script>-->
-        <script>// self, and window are both aliases for the host/window. 
-// parent & top will also point to the window, except when lower down in a frame hierarchy
-// if (top.location != document.location) top.location = document.location;
-window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
-// self, and window are both aliases for the host/window. 
-// parent & top will also point to the window, except when lower down in a frame hierarchy
-// if (top.location != document.location) top.location = document.location;
-if(top!= self) top.location.href = self.location.href
-$(function(){
-  $("#mynavbar").load("mynavbar_documenten.html"); 
-  $("#mycarousel").load("mycarousel.html"); 
-  $("#myfootertje").load("myfooter.html"); 
-});        
-</script>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>A bloc cycling team</title>
+    <meta name="description" content="a bloc cycling team">
+    <meta name="keywords" content="a bloc cycling team opwijk fietsclub de plets">
+    <meta name="author" content="Tom Cleymans">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- robots may index this page and others.. -->
+    <meta name="robots" content="index, follow">
+    <!-- do not cache for the moment as we change this now and then-->
+    <meta http-equiv="pragma" content="no-cache">
+    <link rel="apple-touch-icon" href="images/abloc_logo.jpg">
+    <link rel="stylesheet" href="./scss/custom.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
+
+    $(function () {
+        $("#mynavbar").load("mynavbar.html");
+        $("#myfooter").load("myfooter.html");
+    });
+    </script>
 </head>
+
 <body>
-
-<div id="mynavbar"></div>
-      
-<div class="row">
-<div class="col-xs-12 changecol"> 
-<div class="container outside well">
-
-<div id="mycarousel"></div>
-<!-- page should be same until this spot -->
-    
-    
-<!-- start home -->
-<div class ="container addmargin">
-<div class = "row">
-<div class = "col-xs-12">
-<h4>A Bloc Cycling</h4>    
-     
-<BR/>
-<p>
-    documenten:</br>
-</p>
-          
-<!-- start test tab -->
-    <a href="docs/A%20BLOC%20clubreglement.docx">A BLOC clubreglement</a></BR>
-    <a href="docs/Inschrijvingsformulier%20VWB.xlsx">Inschrijvingsformulier%20VWB</a>
-          
-</div> <!-- end col -->
-</div> <!-- end row --> 
-</div> 
-<!-- end home -->
-    
-    
-<br/>
-<hr/>
-<!-- end home after slider -->
+<div class="container-md">
+    <div id="mynavbar"></div>
+    <div class="row">
+        <div class="col-xs-12">
+            <!-- page should be same until this spot -->
 
 
-<!-- start footer -->
-<footer class="full-width foot">
-    <div id="myfootertje"></div>
-</footer>        
-<!-- end footer -->
+            <!-- start home -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <a href="docs/A%20BLOC%20clubreglement.docx">A BLOC clubreglement</a></BR>
+                        <a href="docs/Inschrijvingsformulier%20VWB.xlsx">Inschrijvingsformulier%20VWB</a>
+                    </div> <!-- end col -->
+                </div> <!-- end row -->
+            </div>
+            <!-- end home -->
 
-<script src="js/bootstrap.js"></script>
-<script src="js/plugins.js"></script>
-<script src="js/main.js"></script>
-</div> <!-- end container -->
-</div> <!-- end row outside -->
-</div><!-- end outside -->
+
+            <br/>
+            <hr/>
+            <!-- end home after slider -->
+        </div> <!-- end container -->
+    </div> <!-- end row outside -->
+    <!-- start footer -->
+    <footer>
+        <div id="myfooter"></div>
+    </footer>
+    <!-- end footer -->
+</div> <!-- container md-->
+<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
 </body>
 </html>
