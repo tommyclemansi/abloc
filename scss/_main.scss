@@ -1,3 +1,33 @@
 body {
   padding-top: 75px;
 }
+
+.logo{
+  animation: logo ease 20s;
+}
+
+.logo-container {
+  padding: 1px !important;
+  animation: logo-container ease 20s;
+}
+
+@keyframes logo {
+  0% {
+    opacity:0.5;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@keyframes logo-container {
+  0% {
+    background: gray;
+  }
+  50% {
+    background: $primary;
+  }
+  100% {
+    background: none;
+  }
+}
