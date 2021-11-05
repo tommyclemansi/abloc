@@ -1,15 +1,35 @@
 body {
   padding-top: 75px;
+  //background-image: linear-gradient(to right, $body-bg 0%,$petrol-green 5%,$petrol-green 95%, $body-bg 100%);
 }
 
 .logo{
   animation: logo ease 20s;
 }
 
+.cyclist {
+  animation: cyclist ease 20s;
+}
+
 .logo-container {
   padding: 1px !important;
   animation: logo-container ease-out 20s;
 }
+
+@keyframes cyclist {
+  from {left: 100%;}
+  to {left: 0%;}
+  0% {
+    opacity:0;
+  }
+  50% {
+    opacity:0.8;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
 
 @keyframes logo {
   0% {
@@ -25,9 +45,9 @@ body {
     background: gray;
   }
   50% {
-    background: $primary;
+    background: $abloc-yellow;
   }
   100% {
-    background: none;
+    background: $abloc-yellow;
   }
 }

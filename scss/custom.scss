@@ -1,9 +1,36 @@
+//@import "../node_modules/bootstrap/scss/functions";
+//@import "../node_modules/bootstrap/scss/variables";
+
+
 // customize
-$primary: #DACF00;
+//$theme-colors: (
+//        primary: $petrol-green
+//);
+//$primary: #DACF00;
+//$dark: $petrol-green;
+
+// Required
+@import "../node_modules/bootstrap/scss/functions";
+$petrol-green: #549b8c;
+$abloc-yellow: #DACF00;
+//$secondary: $abloc-yellow;
+// Default variable overrides
+$body-bg: $petrol-green;
+
+// Required
+//@import "../node_modules/bootstrap/scss/variables";
+//@import "../node_modules/bootstrap/scss/mixins";
+//
+//// Optional Bootstrap components here
+//@import "../node_modules/bootstrap/scss/root";
+//@import "../node_modules/bootstrap/scss/reboot";
+//@import "../node_modules/bootstrap/scss/type";
+
+
+// import bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 
 @import "main";
 @import "carousel";
 @import "footer";
-// import bootstrap
-@import "../node_modules/bootstrap/scss/bootstrap";
-@import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
