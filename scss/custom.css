@@ -10,7 +10,7 @@ body {
 
 .logo-container {
   padding: 1px !important;
-  animation: logo-container ease 20s;
+  animation: logo-container ease-out 20s;
 }
 
 @keyframes logo {
